@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { GetHelloWorld } from "@/app/api/hello/route";
 
 export default async function Home() {
 
-  const response = await fetch(process.env.URL + "/api/hello")
+  const response = await GetHelloWorld();
 
-  const data = await response.text();
+  const data = await response.json();
 
   console.log(data);
 
