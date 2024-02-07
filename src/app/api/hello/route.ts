@@ -5,13 +5,9 @@ import type { NextRequest } from 'next/server'
 export const runtime = 'edge'
 
 
-export async function GetHelloWorld() {
-  return Response.json({ message: 'Hello World' });
-
-}
 
 export async function GET(request: NextRequest) {
-  let responseText = GetHelloWorld();
+
 
   // In the edge runtime you can use Bindings that are available in your application
   // (for more details see:
@@ -25,5 +21,5 @@ export async function GET(request: NextRequest) {
   // const suffix = await myKv.get('suffix')
   // responseText += suffix
 
-  return responseText;
+  return Response.json({ message: 'Hello World' });
 }

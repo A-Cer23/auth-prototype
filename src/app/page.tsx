@@ -1,13 +1,13 @@
+'use client'
+
 import Image from "next/image";
-import { GetHelloWorld } from "@/app/api/hello/route";
 
-export default async function Home() {
+export default  function Home() {
 
-  const response = await GetHelloWorld();
+  window.fetch('api/hello')
+      .then(response => response.json())
+        .then(data => console.log(data));
 
-  const data = await response.json();
-
-  console.log(data);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
