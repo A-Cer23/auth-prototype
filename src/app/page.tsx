@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default async function Home() {
 
-  const response = await fetch("http://localhost:3000/api/hello")
+  const response = await fetch(process.env.URL + "/api/hello")
 
   const data = await response.text();
 
