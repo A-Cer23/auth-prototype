@@ -12,6 +12,7 @@
     "pages:deploy": "pnpm pages:build && wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.29.6",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"
