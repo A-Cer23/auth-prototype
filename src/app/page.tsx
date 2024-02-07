@@ -1,5 +1,7 @@
 import Image from "next/image";
-import {UserButton} from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
+
+export const runtime = 'edge';
 
 export default async function Home() {
 
